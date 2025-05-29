@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommandManager2
+public class CommandManager2 
 {
     private Stack<ICommand2> commandHistory = new Stack<ICommand2>();
     private List<ICommand2> replayList = new List<ICommand2>();

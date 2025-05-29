@@ -35,6 +35,8 @@ public class PuzzleBoard : MonoBehaviour
     // Update is called once per frame
     public void Shuffle()
     {
+        Debug.Log("Shuffled puzzle");
+        
         List<Piece> flat = pieces.Cast<Piece>().ToList();
         System.Random rng = new System.Random();
 
@@ -51,7 +53,7 @@ public class PuzzleBoard : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                pieces[x,y] = flat[x * height + y];
+                pieces[x,y] = flat[index];
                 pieces[x,y].UpdatePosition(new Vector2Int(x, y));
                 index++;
             }

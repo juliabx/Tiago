@@ -10,7 +10,7 @@ public class PuzzleManager : MonoBehaviour
     private bool isReplaying = false;
 
     public void OnPieceClicked(Piece clicledPiece)
-    {
+    { 
         if (isReplaying) return;
 
         if (selectedPiece == null)
