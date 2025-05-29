@@ -6,8 +6,11 @@ public class PuzzleBoard : MonoBehaviour
 {
     public Piece[,] pieces;
     public int width, height;
-    
-    
+
+    void Start()
+    {
+        Shuffle();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void SwapPieces(Vector2Int a, Vector2Int b)
     {
@@ -43,12 +46,14 @@ public class PuzzleBoard : MonoBehaviour
             (flat[n], flat[k]) = (flat[k], flat[n]);
         }
 
+        int index = 0;
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
                 pieces[x,y] = flat[x * height + y];
                 pieces[x,y].UpdatePosition(new Vector2Int(x, y));
+                index++;
             }
         }
     }

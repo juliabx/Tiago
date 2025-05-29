@@ -41,8 +41,11 @@ public class CommandManager2
         return false;
     }
 
-    public void FastFowardReplay()
+    public void FastForwardReplay()
     {
-        while (ReplayNextStep()) {}
+        while (ReplayNextStep())
+        {
+            
+        }
     }
 }

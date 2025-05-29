@@ -20,7 +20,6 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
-            {
                 var pos1 = selectedPiece.CurrentPosition;
                 var pos2 = clicledPiece.CurrentPosition;
 
@@ -83,4 +82,3 @@ public class PuzzleManager : MonoBehaviour
         }
 
     }
-}

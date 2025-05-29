@@ -15,6 +15,7 @@ public class Piece : MonoBehaviour
         CurrentPosition = pos;
         // Mover peça visualmente na UI ou no mundo
         transform.localPosition = new Vector3(pos.x, pos.y, 0);
+        /*transform.position = PuzzleBoard.GetWorldPosition(newPosition);*/
     }
 
     public bool IsInCorrectPosition()
